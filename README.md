@@ -5,4 +5,5 @@ A webpage that makes York University students' lives easier by compiling relevan
 - Resources names and previews/images (embedded with hyperlinks). ✔️
 - Dark/Light Mode. ✔️
 - Resource filtering via checkboxes. ❌
-...potentially more to come.
+
+... potentially more to come.
