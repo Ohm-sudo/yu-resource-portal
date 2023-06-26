@@ -2,69 +2,89 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="https://yulearn.yorku.ca/pluginfile.php/1/theme_moove/favicon/1681940410/favicon.ico">
     <title>York University Student Resource Portal</title>
+    <script src="portal.js"></script>
 </head>
 <link rel="stylesheet" type="text/css" href="portal.css">
 
 <body>
     <!-- Header of the web page -->
     <section id = "header">
-        
+        <div class="menu-bar">
+            <a onclick="toggleTag('menu-items')" href="javascript:void(0);" id="menu-bar-icon">☰</a>
+            <div id="menu-items" style="display:none;">
+                <div class="courses">
+                    <h1>Courses</h1>
+                        <input onclick="toggleTag('eClass')" type="checkbox" checked> eClass <br>
+                        <input onclick="toggleTag('VSB')" type="checkbox" checked> Visual Schedule Builder <br>
+                        <input onclick="toggleTag('YorkCourses')" type="checkbox" checked> York Courses <br>
+                        <input onclick="toggleTag('REM')" type="checkbox" checked> Registration and Enrolment Module <br>
+                        <input onclick="toggleTag('DPR')" type="checkbox" checked> Degree Progress Report <br>
+                        <input onclick="toggleTag('GPA')" type="checkbox" checked> GPA Calculator
+                    </div>
+            
+                    <div class="misc">
+                        <h1>Miscellaneous</h1>
+                            <input onclick="toggleTag('SWS')" type="checkbox" checked> Student Web Services <br>
+                            <input onclick="toggleTag('SFP')" type="checkbox" checked> Student Financial Profile <br>
+                            <input onclick="toggleTag('EXP')" type="checkbox" checked> Experience Portal <br>
+                    </div>
+            </div>
+        </div>
         <a href="https://yorku.ca" target="_blank"><img id="york-logo" src="pictures/york-logo.png"></a>
+        <p id="subtitle">Student Resources Portal</p>
+        <button id="darkModeB" onclick="darkMode()">🌙 Dark Mode</button>
     </section>
 
-    <p id = "sub-title">Student Resources Portal<br>
-        <button id="darkMode" onclick="darkMode()">🌙 Dark Mode</button>
-    </p>
+    
+    
             
     <!-- Web page content -->
     <section id = "portalbody" class="thumbnails">
-        <div>
+        <div id="eClass">
             <h2>eClass</h2>
                 <a href="https://eclass.yorku.ca/my/" target="_blank"><img src="pictures/eclass.png" alt="eclass"></a>
         </div>
 
-        <div>
+        <div id="VSB">
             <h2>Visual Schedule Builder</h2>
                 <a href="https://registrar.yorku.ca/enrol/guide/vsb" target="_blank"><img src="pictures/vsb.png" alt="vsb"></a>
         </div>
         
-        <div>
+        <div id="SWS">
             <h2>Student Web Services</h2>
                 <a href="https://apps7.sis.yorku.ca/Apps/WebObjects/SAM.woa/wa/DirectAction/sam" target="_blank"><img src="pictures/webservice.png" alt="webservice"></a>
         </div>
 
-        <div>
+        <div id="EXP">
             <h2>Experience Portal</h2>
                 <a href="https://experience.yorku.ca/myAccount/dashboard.htm" target="_blank"><img src="pictures/experience.png" alt="experience"></a>
         </div>
 
-        <div>
+        <div id="DPR">
             <h2>Degree Progress Report</h2>
                 <a href="https://myacademicrecord.students.yorku.ca/degree-progress-report" target="_blank"><img src="pictures/dpr.png" alt="dpr" ></a>
         </div>
 
-        <div>
+        <div id="YorkCourses">
             <h2>York Courses</h2>
                 <a href="https://w2prod.sis.yorku.ca/Apps/WebObjects/cdm" target="_blank"><img src="pictures/courses.PNG" alt="courses"></a>
         </div>
 
-        <div>
+        <div id="REM">
             <h2>Registration and Enrolment Module</h2>
                 <a href="https://wrem.sis.yorku.ca/Apps/WebObjects/REM.woa/wa/DirectAction/rem" target="_blank"><img src="pictures/rem.png" alt="rem"></a>
         </div>
 
-        <div>
+        <div id="GPA">
             <h2>GPA Calculator</h2>
                 <a href="https://apps12.sis.yorku.ca/apps/gpa-calculator/" target="_blank"><img src="pictures/gpa.png" alt="gpa"></a>
         </div>
 
-        <div>
+        <div id="SFP">
             <h2>Student Financial Profile</a></h2>
             <a href="https://apps4.sis.yorku.ca/Apps/WebObjects/OSS" target="_blank"><img src="pictures/sfp.png" alt="sfp"></a>
         </div>
     </section>
-    
-    <script src="portal.js"></script>
 </body>
 
         

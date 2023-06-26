@@ -24,6 +24,82 @@ body {
     outline: 2px solid black;
 }
 
+.menu-bar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: -50px;
+    bottom: 0px;
+    max-height: 50px;
+    background-color: red;
+}
+
+#header {
+    margin-bottom: 75px; 
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    text-align: center;
+}
+
+#menu-bar-icon {
+    position: fixed;
+    background-color: black;
+    color: white;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+#menu-items {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    left: -50px;
+    bottom: 0px;
+    max-height: 200px;
+    text-align: left;
+    background-color: rgb(191, 191, 191);
+}
+
+
+#subtitle {
+    position: absolute; 
+    top: 175px;
+    text-align: center;
+    font-family: 'IBMPlexSans-Medium';
+    font-style: italic;
+}
+
+#darkModeB {
+    position: absolute; 
+    right: 0px; 
+    top: 215px;
+    background-color: red;
+    color: black;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'IBMPlexSans-Bold';
+    box-shadow: 0 5px #999;
+    margin-right: 40px;
+}
+
+
+#darkModeB.hover { background-color: #ff000075 }
+
+#darkModeB:active {
+    background-color: #ff000075;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 #portalbody {
     outline: 16px solid red;
     text-align: center;
@@ -37,41 +113,6 @@ body {
     object-fit: contain;
 }
 
-#header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    text-align: center;
-    margin:-25px;
-}
-
-#sub-title {
-    text-align: center;
-    font-family: 'IBMPlexSans-Medium';
-    font-style: italic;
-}
-
-#darkMode {
-    background-color: red;
-    color: black;
-    border: 2px solid black;
-    border-radius: 15px;
-    font-size: 16px;
-    font-family: 'IBMPlexSans-Bold';
-    box-shadow: 0 5px #999;
-    float: right; 
-    margin-right: 40px;
-}
-
-
-#darkMode.hover { background-color: #ff000075 }
-
-#darkMode:active {
-    background-color: #ff000075;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
 
 @font-face {
     font-family: 'IBMPlexSans-Bold';
