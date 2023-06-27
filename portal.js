@@ -7,7 +7,7 @@ function darkMode() {
     localStorage.setItem('darkMode', isDarkMode)
 
     // Update toggle button based on current mode
-    darkModeToggle.textContent = isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+    darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙';
     
     var img = document.getElementById("york-logo");
     var imageSrc = isDarkMode ? "pictures/york-logo-dm.png" : "pictures/york-logo.png";
@@ -21,12 +21,12 @@ function toggleTag(name) {
     {
         if(subtitle.style.display === 'none') {
             subtitle.style.display = 'flex';
-            darkModeB.style.display = 'flex';
+            //darkModeB.style.display = 'flex';
             tag.style.display = 'none';
         }
         else {
             subtitle.style.display = 'none';
-            darkModeB.style.display = 'none';
+            //darkModeB.style.display = 'none';
             tag.style.display = 'flex';
         }
     }
@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if(isDarkMode === 'true') {
         document.body.classList.add('dark-mode');
-        darkModeToggle.textContent = '☀️ Light Mode';
+        darkModeToggle.textContent = '☀️';
     }
     else {
         document.body.classList.remove('dark-mode');
-        darkModeToggle.textContent = '🌙 Dark Mode';
+        darkModeToggle.textContent = '🌙';
     }
 
     var img = document.getElementById("york-logo");

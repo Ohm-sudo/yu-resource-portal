@@ -31,7 +31,7 @@ body {
     left: -50px;
     bottom: 0px;
     max-height: 50px;
-    background-color: red;
+    background-color: #e31837;
 }
 
 #header {
@@ -63,9 +63,11 @@ body {
     right: 0px;
     left: -50px;
     bottom: 0px;
-    max-height: 200px;
+    max-height: 250px;
     text-align: left;
-    background-color: rgb(191, 191, 191);
+    color: #e2bfbf;
+    background-color: #8c0000;
+    font-family: 'IBMPlexSans-Medium';
 }
 
 
@@ -78,16 +80,15 @@ body {
 }
 
 #darkModeB {
-    position: absolute; 
-    right: 0px; 
-    top: 215px;
-    background-color: red;
+    position: fixed; 
+    right: 30px; 
+    top: 10px;
+    background-color: #c61932;
     color: black;
     border: 2px solid black;
     border-radius: 15px;
     font-size: 16px;
     font-family: 'IBMPlexSans-Bold';
-    box-shadow: 0 5px #999;
     margin-right: 40px;
 }
 
@@ -96,14 +97,13 @@ body {
 
 #darkModeB:active {
     background-color: #ff000075;
-    box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
 
 #portalbody {
-    outline: 16px solid red;
+    outline: 16px solid #e31837;
     text-align: center;
-    margin: 50px;
+    margin: 150px;
     font-family: 'IBMPlexSans-Bold';
 }
 
