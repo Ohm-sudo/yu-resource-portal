@@ -17,6 +17,11 @@ body {
     color: white;
 }
 
+.dark-mode2 {
+    background-color: white;
+    color: black;
+}
+
 .thumbnails img {
     width: 450px;
     height: 350px;
@@ -34,6 +39,12 @@ body {
     background-color: #e31837;
 }
 
+.select {
+    position: fixed;
+    top: 245px;
+    right: 75px;
+}
+
 #header {
     margin-bottom: 75px; 
     margin-top: 50px;
@@ -46,7 +57,7 @@ body {
 
 #menu-bar-icon {
     position: fixed;
-    background-color: black;
+    background-color: #8c0000;
     color: white;
     top: 0;
     right: 0;
@@ -83,11 +94,11 @@ body {
     position: fixed; 
     right: 30px; 
     top: 10px;
-    background-color: #c61932;
+    background-color: #8c0000;
     color: black;
-    border: 2px solid black;
-    border-radius: 15px;
-    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-size: 18px;
     font-family: 'IBMPlexSans-Bold';
     margin-right: 40px;
 }
@@ -111,6 +122,18 @@ body {
     max-width: 200%;
     max-height: 200%;
     object-fit: contain;
+}
+
+#checkbox10 {
+    position: fixed;
+    top:77px;
+    left:45px;
+}
+
+#checkbox11 {
+    position: fixed;
+    top:77px;
+    left:355px;
 }
 
 
