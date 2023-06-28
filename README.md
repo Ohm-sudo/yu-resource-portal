@@ -9,5 +9,6 @@ The project is still a work in progress and I look forward to reaching the final
 - Resource filtering via checkboxes. ✔️
 - Presets. ❌
 - Background, color customization. ❌
+- Content layout configuration. ❌
 
 ... potentially more to come.
