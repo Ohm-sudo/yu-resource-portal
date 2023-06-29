@@ -27,21 +27,8 @@ function toggleTag(name) {
 }
 
 function checkCheckboxState(checkbox) {
-    var checkboxId = checkbox.id;
     var targetId = checkbox.dataset.target;
     var targetElement = document.getElementById(targetId);
-
-    var checkboxLabels = [];
-
-    // Code functions the same without the following code
-    // for (var i = 1; i <= 9; i++) {
-    //     var label = "Checkbox" + i;
-    //     checkboxLabels.push({ id: "checkbox" + i, label: label});
-    // }
-
-    // var label = checkboxLabels.find(function(item) {
-    //     return item.id === checkboxId;
-    // });
 
     // Element appears if checkbox is checked, otherwise missing
     if(checkbox.checked) {
@@ -51,27 +38,20 @@ function checkCheckboxState(checkbox) {
     }
 }
 
-// function toggleCheckboxes(a, b, c) {
-//     var masterCheckbox = document.getElementById(c);
-//     var checkboxes = [];
+function toggleCheckboxes(a, b, c) {
+    var masterCheckbox = document.getElementById(c);
+    var checkboxes = [];
 
-//     for(var i = a; i <= b; i++)
-//     {
-//         var checkbox = document.getElementById("checkbox" + i);
-//         checkboxes.push(checkbox);
-//     }
+    for (var i = a; i <= b; i++) {
+        var checkbox = document.getElementById("checkbox" + i);
+        checkboxes.push(checkbox);
+    }
 
-//     var newCheckboxes = checkboxes.filter((value, index, self) => {
-//         return self.indexOf(value) === index;
-//     });
-
-    
-//     for(var j = 0; j < newCheckboxes.length; j++)
-//     {
-//         newCheckboxes[j].checked = masterCheckbox.checked;
-//     }
-//     location.reload();
-// }
+    for (var j = 0; j < checkboxes.length+1; j++) {
+        checkboxes[j].checked = masterCheckbox.checked;
+        checkCheckboxState(checkboxes[j]); // Trigger checkbox state update
+    }
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     // Check dark mode preference on load
@@ -101,5 +81,11 @@ document.addEventListener("DOMContentLoaded", function() {
             checkCheckboxState(event.target);
         });
         checkCheckboxState(checkbox);
+    });
+
+    // Add event listener to master checkbox
+    var masterCheckbox = document.getElementById('masterCheckbox');
+    masterCheckbox.addEventListener("change", function (event) {
+        toggleCheckboxes(1, 11, 'masterCheckbox');
     });
 });

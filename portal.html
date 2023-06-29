@@ -7,7 +7,6 @@
 <link rel="stylesheet" type="text/css" href="portal.css">
 
 <body>
-    <!-- Header of the web page -->
     <section id = "header">
         <div class="menu-bar">
             <a onclick="toggleTag('menu-items')" href="javascript:void(0);" id="menu-bar-icon">☰</a>
@@ -30,12 +29,14 @@
                             <input id="checkbox9" type="checkbox" data-target="EXP" checked> Experience Portal <br>
                 </div>
 
-                <div class="select">
-                    <!-- Recommended to add more check boxes AFTER the following check box -->
-                    <!-- <h1 style="font-size:16px;">Select/Unselect All <input onclick="toggleCheckboxes(1,11,'masterCheckbox')" type="checkbox" id="masterCheckbox" checked></h1> -->
-                    <!-- <input onclick="toggleCheckboxes(1,6,'checkbox10')" type="checkbox" id="checkbox10" checked>
-                    <input onclick="toggleCheckboxes(1,3,'checkbox11')"type="checkbox" id="checkbox11" checked> -->
-                 </div>
+                 <div class="select">
+                    <h1 style="font-size:16px;">
+                      Select/Unselect All
+                      <input onchange="toggleCheckboxes(1,11,'masterCheckbox')" type="checkbox" id="masterCheckbox" checked>
+                    </h1>
+                    <input onchange="toggleCheckboxes(1,6,'checkbox10')" type="checkbox" id="checkbox10" checked>
+                    <input onchange="toggleCheckboxes(7,9,'checkbox11')" type="checkbox" id="checkbox11" checked>
+                </div>
             </div>
         </div>
         <a href="https://yorku.ca" target="_blank"><img id="york-logo" src="pictures/york-logo.png"></a>
@@ -43,10 +44,6 @@
         <button id="darkModeB" onclick="darkMode()">🌙</button>
     </section>
 
-    
-    
-            
-    <!-- Web page content -->
     <section id = "portalbody" class="thumbnails">
         <div id="eClass">
             <h2>eClass</h2>
@@ -94,5 +91,3 @@
         </div>
     </section>
 </body>
-
-        
