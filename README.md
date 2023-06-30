@@ -10,5 +10,6 @@ The project is still a work in progress and I look forward to reaching the final
 - Presets. ❌
 - Background, color customization. ❌
 - Content layout configuration. ❌
+- Resource descriptions. ❌
 
 ... potentially more to come.
