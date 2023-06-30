@@ -1,3 +1,4 @@
+// Web page dark mode setting
 function darkMode() {
     var body = document.body;
     var darkModeToggle = document.getElementById("darkModeB")
@@ -14,10 +15,11 @@ function darkMode() {
     img.src = imageSrc;
 }
 
+// Toggle the expanded menu bar
 function toggleTag(name) {
     var tag = document.getElementById(name);
     if(subtitle.style.display === 'none') {
-        subtitle.style.display = 'flex';
+        subtitle.style.display = 'block';
         tag.style.display = 'none';
     }
     else {
@@ -26,7 +28,8 @@ function toggleTag(name) {
     }
 }
 
-function checkCheckboxState(checkbox) {
+//
+function chkCheckboxState(checkbox) {
     var targetId = checkbox.dataset.target;
     var targetElement = document.getElementById(targetId);
 
@@ -38,19 +41,27 @@ function checkCheckboxState(checkbox) {
     }
 }
 
-function toggleCheckboxes(a, b, c) {
-    var masterCheckbox = document.getElementById(c);
-    var checkboxes = [];
+function toggleCheckboxes(category, isChecked) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"][data-category="' + category + '"]');
 
-    for (var i = a; i <= b; i++) {
-        var checkbox = document.getElementById("checkbox" + i);
-        checkboxes.push(checkbox);
-    }
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = isChecked;
+        chkCheckboxState(checkboxes[i]);
+    }    
+}
 
-    for (var j = 0; j < checkboxes.length+1; j++) {
-        checkboxes[j].checked = masterCheckbox.checked;
-        checkCheckboxState(checkboxes[j]); // Trigger checkbox state update
+function updChkbox(category, masterID) {
+    var updChkbox = document.getElementById(masterID);
+    var checkboxes = document.querySelectorAll('input[type="checkbox"][data-category="' + category +'"]');
+
+    var allChecked = true;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if(!checkboxes[i].checked) {
+            allChecked = false;
+            break;
+        }
     }
+    updChkbox.checked = allChecked;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -78,14 +89,33 @@ document.addEventListener("DOMContentLoaded", function() {
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(function(checkbox) {
         checkbox.addEventListener("change", function(event) {
-            checkCheckboxState(event.target);
+            chkCheckboxState(event.target);
         });
-        checkCheckboxState(checkbox);
+        chkCheckboxState(checkbox);
     });
 
-    // Add event listener to master checkbox
-    var masterCheckbox = document.getElementById('masterCheckbox');
-    masterCheckbox.addEventListener("change", function (event) {
-        toggleCheckboxes(1, 11, 'masterCheckbox');
-    });
+    var imageContainers = document.querySelectorAll(".img-container");
+    var imageDescriptions = document.querySelectorAll(".img-desc");
+
+            imageContainers.forEach(function(container) {
+                container.addEventListener("mouseover", function() {
+                    // Hide all descriptions
+                    imageDescriptions.forEach(function(description) {
+                        description.style.opacity = 0;
+                    });
+
+                    // Show the description for the current image
+                    var description = container.querySelector(".img-desc");
+                    if (description) {
+                        description.style.opacity = 1;
+                    }
+                });
+
+                container.addEventListener("mouseout", function() {
+                    // Hide all descriptions when mouse leaves the container
+                    imageDescriptions.forEach(function(description) {
+                        description.style.opacity = 0;
+                    });
+                });
+            });
 });

@@ -1,3 +1,12 @@
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: inherit;
+  }
+
 div {
     display: inline-block;
     margin-left: 50px;
@@ -22,7 +31,7 @@ body {
     color: black;
 }
 
-.thumbnails img {
+.thumbnails img{
     width: 450px;
     height: 350px;
     margin-bottom: 50px;
@@ -44,16 +53,30 @@ body {
     top: 245px;
     right: 75px;
 }
-
-#header {
-    margin-bottom: 75px; 
-    margin-top: 50px;
+  
+.img-container .img-desc {
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+    align-items: flex-end;
+  }
+  
+  .img-desc {
+    bottom: 64px;
+    left: 28px;
+    margin: -30px;
+    width: 96%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
     text-align: center;
-}
+    transition: opacity 0.3s ease;
+  }
+  
+  
+  .img-container:hover .img-desc {
+    opacity: 1;
+  }
 
 #menu-bar-icon {
     position: fixed;
@@ -81,10 +104,14 @@ body {
     font-family: 'IBMPlexSans-Medium';
 }
 
+#york-logo {
+    display:block;
+    margin-top: 75px;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 #subtitle {
-    position: absolute; 
-    top: 175px;
     text-align: center;
     font-family: 'IBMPlexSans-Medium';
     font-style: italic;
@@ -103,7 +130,6 @@ body {
     margin-right: 40px;
 }
 
-
 #darkModeB.hover { background-color: #ff000075 }
 
 #darkModeB:active {
@@ -116,12 +142,6 @@ body {
     text-align: center;
     margin: 150px;
     font-family: 'IBMPlexSans-Bold';
-}
-
-#header img {
-    max-width: 200%;
-    max-height: 200%;
-    object-fit: contain;
 }
 
 #checkbox10 {

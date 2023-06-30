@@ -13,81 +13,121 @@
             <div id="menu-items" style="display:none;">
                 <div class="courses">
                     <h1 style="margin-left: 20px;">Courses</h1>
-                        <input type="checkbox" id="checkbox1" data-target="eClass" checked> eClass <br>
-                        <input type="checkbox" id="checkbox2" data-target="VSB" checked> Visual Schedule Builder <br>
-                        <input type="checkbox" id="checkbox3" data-target="YorkCourses" checked> York Courses <br>
-                        <input type="checkbox" id="checkbox4" data-target="REM" checked> Registration and Enrolment Module <br>
-                        <input type="checkbox" id="checkbox5" data-target="DPR" checked> Degree Progress Report <br>
-                        <input type="checkbox" id="checkbox6" data-target="GPA" checked> GPA Calculator
-
+                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox1" data-target="eClass" data-category="Courses" checked> eClass <br>
+                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox2" data-target="VSB" data-category="Courses" checked> Visual Schedule Builder <br>
+                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox3" data-target="YorkCourses" data-category="Courses" checked> York Courses <br>
+                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox4" data-target="REM" data-category="Courses" checked> Registration and Enrolment Module <br>
+                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox5" data-target="DPR" data-category="Courses" checked> Degree Progress Report <br>
+                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox6" data-target="GPA" data-category="Courses" checked> GPA Calculator
                 </div>
             
                 <div class="misc">
                     <h1>Miscellaneous</h1>
-                            <input id="checkbox7" type="checkbox" data-target="SWS" checked> Student Web Services <br>
-                            <input id="checkbox8" type="checkbox" data-target="SFP" checked> Student Financial Profile <br>
-                            <input id="checkbox9" type="checkbox" data-target="EXP" checked> Experience Portal <br>
+                            <input onchange="updChkbox('Miscellaneous', 'checkbox11')" id="checkbox7" type="checkbox" data-target="SWS" data-category="Miscellaneous" checked> Student Web Services <br>
+                            <input onchange="updChkbox('Miscellaneous', 'checkbox11')" id="checkbox8" type="checkbox" data-target="SFP" data-category="Miscellaneous" checked> Student Financial Profile <br>
+                            <input onchange="updChkbox('Miscellaneous', 'checkbox11')" id="checkbox9" type="checkbox" data-target="EXP" data-category="Miscellaneous" checked> Experience Portal <br>
                 </div>
 
                  <div class="select">
-                    <h1 style="font-size:16px;">
-                      Select/Unselect All
-                      <input onchange="toggleCheckboxes(1,11,'masterCheckbox')" type="checkbox" id="masterCheckbox" checked>
-                    </h1>
-                    <input onchange="toggleCheckboxes(1,6,'checkbox10')" type="checkbox" id="checkbox10" checked>
-                    <input onchange="toggleCheckboxes(7,9,'checkbox11')" type="checkbox" id="checkbox11" checked>
+                    <input onchange="toggleCheckboxes('Courses', this.checked)" type="checkbox" id="checkbox10" checked>
+                    <input onchange="toggleCheckboxes('Miscellaneous', this.checked)" type="checkbox" id="checkbox11" checked>
                 </div>
             </div>
         </div>
-        <a href="https://yorku.ca" target="_blank"><img id="york-logo" src="pictures/york-logo.png"></a>
+        <a href="https://yorku.ca" target="_blank"><img id="york-logo" src="pictures/york-logo.png"></a><br>
         <p id="subtitle">Student Resources Portal</p>
         <button id="darkModeB" onclick="darkMode()">🌙</button>
     </section>
 
     <section id = "portalbody" class="thumbnails">
-        <div id="eClass">
-            <h2>eClass</h2>
-                <a href="https://eclass.yorku.ca/my/" target="_blank"><img src="pictures/eclass.png" alt="eclass"></a>
+        <div class= "img-container" id="eClass">
+                <h2>eClass</h2>
+                <a href="https://eclass.yorku.ca/my/" target="_blank">
+                <img src="pictures/eclass.png" alt="eclass">
+                <div class="img-desc">
+                    Courses, quizzes, exams, assignments, and more...
+                </div>
+            </a>
         </div>
 
-        <div id="VSB">
+        <div class= "img-container" id="VSB">
             <h2>Visual Schedule Builder</h2>
-                <a href="https://registrar.yorku.ca/enrol/guide/vsb" target="_blank"><img src="pictures/vsb.png" alt="vsb"></a>
+                <a href="https://registrar.yorku.ca/enrol/guide/vsb" target="_blank">
+                <img src="pictures/vsb.png" alt="vsb">
+                <div class="img-desc">
+                    Helps prepare a schedule ahead of your enrolment date
+                </div>
+            </a>
         </div>
         
-        <div id="SWS">
+        <div class= "img-container" id="SWS">
             <h2>Student Web Services</h2>
-                <a href="https://apps7.sis.yorku.ca/Apps/WebObjects/SAM.woa/wa/DirectAction/sam" target="_blank"><img src="pictures/webservice.png" alt="webservice"></a>
+                <a href="https://apps7.sis.yorku.ca/Apps/WebObjects/SAM.woa/wa/DirectAction/sam" target="_blank">
+                <img src="pictures/webservice.png" alt="webservice">
+                <div class="img-desc">
+                    Personal info, banking info, enrolment times...
+                </div>
+            </a>
         </div>
 
-        <div id="EXP">
+        <div class= "img-container" id="EXP">
             <h2>Experience Portal</h2>
-                <a href="https://experience.yorku.ca/myAccount/dashboard.htm" target="_blank"><img src="pictures/experience.png" alt="experience"></a>
+                <a href="https://experience.yorku.ca/myAccount/dashboard.htm" target="_blank">
+                <img src="pictures/experience.png" alt="experience">
+                <div class="img-desc">
+                    Job Postings, Career Centre, Internships, Research...
+                </div>
+            </a>
         </div>
 
-        <div id="DPR">
+        <div class= "img-container" id="DPR">
             <h2>Degree Progress Report</h2>
-                <a href="https://myacademicrecord.students.yorku.ca/degree-progress-report" target="_blank"><img src="pictures/dpr.png" alt="dpr" ></a>
+                <a href="https://myacademicrecord.students.yorku.ca/degree-progress-report" target="_blank">
+                <img src="pictures/dpr.png" alt="dpr" >
+                <div class="img-desc">
+                    Checks requirements to graduate in your degree program
+                </div>
+            </a>
         </div>
 
-        <div id="YorkCourses">
+        <div class= "img-container" id="YorkCourses">
             <h2>York Courses</h2>
-                <a href="https://w2prod.sis.yorku.ca/Apps/WebObjects/cdm" target="_blank"><img src="pictures/courses.PNG" alt="courses"></a>
+                <a href="https://w2prod.sis.yorku.ca/Apps/WebObjects/cdm" target="_blank">
+                <img src="pictures/courses.PNG" alt="courses">
+                <div class="img-desc">
+                     Search courses available for Fall/Winter, or Summer
+                </div>
+            </a>
         </div>
 
-        <div id="REM">
+        <div class= "img-container" id="REM">
             <h2>Registration and Enrolment Module</h2>
-                <a href="https://wrem.sis.yorku.ca/Apps/WebObjects/REM.woa/wa/DirectAction/rem" target="_blank"><img src="pictures/rem.png" alt="rem"></a>
+                <a href="https://wrem.sis.yorku.ca/Apps/WebObjects/REM.woa/wa/DirectAction/rem" target="_blank">
+                <img src="pictures/rem.png" alt="rem">
+                <div class="img-desc">
+                    Enrol in your courses for the upcoming semester
+               </div>
+            </a>
         </div>
 
-        <div id="GPA">
+        <div class= "img-container" id="GPA">
             <h2>GPA Calculator</h2>
-                <a href="https://apps12.sis.yorku.ca/apps/gpa-calculator/" target="_blank"><img src="pictures/gpa.png" alt="gpa"></a>
+                <a href="https://apps12.sis.yorku.ca/apps/gpa-calculator/" target="_blank">
+                <img src="pictures/gpa.png" alt="gpa">
+                <div class="img-desc">
+                    Calculates your GPA
+               </div>
+            </a>
         </div>
 
-        <div id="SFP">
+        <div class= "img-container" id="SFP">
             <h2>Student Financial Profile</a></h2>
-            <a href="https://apps4.sis.yorku.ca/Apps/WebObjects/OSS" target="_blank"><img src="pictures/sfp.png" alt="sfp"></a>
+                <a href="https://apps4.sis.yorku.ca/Apps/WebObjects/OSS" target="_blank">
+                <img src="pictures/sfp.png" alt="sfp">
+                <div class="img-desc">
+                    View tuition fees, monthly statements, transactions...
+               </div>
+            </a>
         </div>
     </section>
 </body>
