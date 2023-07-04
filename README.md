@@ -8,7 +8,6 @@ The project is still a work in progress and I look forward to reaching the final
 - Dark/Light Mode. ✔️
 - Resource filtering via checkboxes. ✔️
 - Resource descriptions. ✔️
-- Background, color customization. ❌
 - Content layout configuration. ❌
 
 ... potentially more to come.
