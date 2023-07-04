@@ -144,16 +144,16 @@ body {
     font-family: 'IBMPlexSans-Bold';
 }
 
-#checkbox10 {
+#courseChkbox {
     position: fixed;
     top:77px;
-    left:45px;
+    left:50px;
 }
 
-#checkbox11 {
+#miscChkbox {
     position: fixed;
     top:77px;
-    left:355px;
+    left:383px;
 }
 
 

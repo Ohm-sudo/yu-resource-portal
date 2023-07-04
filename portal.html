@@ -12,25 +12,27 @@
             <a onclick="toggleTag('menu-items')" href="javascript:void(0);" id="menu-bar-icon">☰</a>
             <div id="menu-items" style="display:none;">
                 <div class="courses">
-                    <h1 style="margin-left: 20px;">Courses</h1>
-                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox1" data-target="eClass" data-category="Courses" checked> eClass <br>
-                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox2" data-target="VSB" data-category="Courses" checked> Visual Schedule Builder <br>
-                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox3" data-target="YorkCourses" data-category="Courses" checked> York Courses <br>
-                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox4" data-target="REM" data-category="Courses" checked> Registration and Enrolment Module <br>
-                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox5" data-target="DPR" data-category="Courses" checked> Degree Progress Report <br>
-                        <input onchange="updChkbox('Courses', 'checkbox10')" type="checkbox" id="checkbox6" data-target="GPA" data-category="Courses" checked> GPA Calculator
+                    <h1 style="margin-left: 25px;">Courses</h1>
+                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox1" data-target="eClass" data-category="Courses" checked> eClass <br>
+                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox2" data-target="VSB" data-category="Courses" checked> Visual Schedule Builder <br>
+                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox3" data-target="YorkCourses" data-category="Courses" checked> York Courses <br>
+                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox4" data-target="REM" data-category="Courses" checked> Registration and Enrolment Module <br>
+                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox5" data-target="DPR" data-category="Courses" checked> Degree Progress Report <br>
+                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox6" data-target="GPA" data-category="Courses" checked> GPA Calculator
                 </div>
             
                 <div class="misc">
-                    <h1>Miscellaneous</h1>
-                            <input onchange="updChkbox('Miscellaneous', 'checkbox11')" id="checkbox7" type="checkbox" data-target="SWS" data-category="Miscellaneous" checked> Student Web Services <br>
-                            <input onchange="updChkbox('Miscellaneous', 'checkbox11')" id="checkbox8" type="checkbox" data-target="SFP" data-category="Miscellaneous" checked> Student Financial Profile <br>
-                            <input onchange="updChkbox('Miscellaneous', 'checkbox11')" id="checkbox9" type="checkbox" data-target="EXP" data-category="Miscellaneous" checked> Experience Portal <br>
+                    <h1 style="margin-left: 25px;">Miscellaneous</h1>
+                            <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox7" type="checkbox" data-target="SWS" data-category="Miscellaneous" checked> Student Web Services <br>
+                            <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox8" type="checkbox" data-target="SFP" data-category="Miscellaneous" checked> Student Financial Profile <br>
+                            <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox9" type="checkbox" data-target="EXP" data-category="Miscellaneous" checked> Experience Portal <br>
+                            <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox10" type="checkbox" data-target="Library" data-category="Miscellaneous" checked> York Libraries <br>
+                            <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox11" type="checkbox" data-target="Atlas" data-category="Miscellaneous" checked> York Atlas <br>
                 </div>
 
-                 <div class="select">
-                    <input onchange="toggleCheckboxes('Courses', this.checked)" type="checkbox" id="checkbox10" checked>
-                    <input onchange="toggleCheckboxes('Miscellaneous', this.checked)" type="checkbox" id="checkbox11" checked>
+                <div class="select">
+                    <input onchange="toggleCheckboxes('Courses', this.checked)" type="checkbox" id="courseChkbox" checked>
+                    <input onchange="toggleCheckboxes('Miscellaneous', this.checked)" type="checkbox" id="miscChkbox" checked>
                 </div>
             </div>
         </div>
@@ -91,7 +93,7 @@
         </div>
 
         <div class= "img-container" id="YorkCourses">
-            <h2>York Courses</h2>
+            <h2>Courses</h2>
                 <a href="https://w2prod.sis.yorku.ca/Apps/WebObjects/cdm" target="_blank">
                 <img src="pictures/courses.PNG" alt="courses">
                 <div class="img-desc">
@@ -126,6 +128,26 @@
                 <img src="pictures/sfp.png" alt="sfp">
                 <div class="img-desc">
                     View tuition fees, monthly statements, transactions...
+               </div>
+            </a>
+        </div>
+
+        <div class= "img-container" id="Library">
+            <h2>Libraries</a></h2>
+                <a href="https://www.library.yorku.ca/web/" target="_blank">
+                <img src="pictures/yulibraries.png" alt="yulibraries">
+                <div class="img-desc">
+                    Search books, workshops, locations, and study spaces
+               </div>
+            </a>
+        </div>
+
+        <div class= "img-container" id="Atlas">
+            <h2>Atlas</a></h2>
+                <a href="https://atlas.cafe.uit.yorku.ca/atlas/servlet/atlas/" target="_blank">
+                <img src="pictures/yuatlas.png" alt="yuatlas">
+                <div class="img-desc">
+                    Phone and e-mail directory
                </div>
             </a>
         </div>

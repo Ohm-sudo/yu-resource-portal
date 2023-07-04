@@ -1,3 +1,5 @@
+barState = false;
+
 // Web page dark mode setting
 function darkMode() {
     var body = document.body;
@@ -18,13 +20,13 @@ function darkMode() {
 // Toggle the expanded menu bar
 function toggleTag(name) {
     var tag = document.getElementById(name);
-    if(subtitle.style.display === 'none') {
-        subtitle.style.display = 'block';
+    if(barState == true) {
         tag.style.display = 'none';
+        barState = false;
     }
     else {
-        subtitle.style.display = 'none';
         tag.style.display = 'flex';
+        barState = true;
     }
 }
 
