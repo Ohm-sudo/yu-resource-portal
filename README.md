@@ -7,7 +7,7 @@ The project is still a work in progress and I look forward to reaching the final
 - Resources names and previews/images (embedded with hyperlinks). ✔️
 - Dark/Light Mode. ✔️
 - Resource filtering via checkboxes. ✔️
-- Presets. ❌
+- Resource descriptions. ✔️
 - Background, color customization. ❌
 - Content layout configuration. ❌
 - Resource descriptions. ❌
