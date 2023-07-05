@@ -30,7 +30,6 @@ function toggleTag(name) {
     }
 }
 
-//
 function chkCheckboxState(checkbox) {
     var targetId = checkbox.dataset.target;
     var targetElement = document.getElementById(targetId);
@@ -66,6 +65,30 @@ function updChkbox(category, masterID) {
     updChkbox.checked = allChecked;
 }
 
+function saveCheckboxState(checkbox) {
+    var checkboxId = checkbox.id;
+    localStorage.setItem(checkboxId, checkbox.checked);
+}
+
+function loadCheckboxState(checkbox) {
+    var checkboxId = checkbox.id;
+    var storedState = localStorage.getItem(checkboxId);
+    if (storedState !== null) {
+        checkbox.checked = (storedState === 'true');
+    }
+}
+
+function applyCheckboxStateHandlers() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function() {
+            saveCheckboxState(this);
+        });
+        loadCheckboxState(checkbox);
+        chkCheckboxState(checkbox);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     // Check dark mode preference on load
     var darkModeToggle = document.getElementById('darkModeB');
@@ -99,25 +122,25 @@ document.addEventListener("DOMContentLoaded", function() {
     var imageContainers = document.querySelectorAll(".img-container");
     var imageDescriptions = document.querySelectorAll(".img-desc");
 
-            imageContainers.forEach(function(container) {
-                container.addEventListener("mouseover", function() {
-                    // Hide all descriptions
-                    imageDescriptions.forEach(function(description) {
-                        description.style.opacity = 0;
-                    });
-
-                    // Show the description for the current image
-                    var description = container.querySelector(".img-desc");
-                    if (description) {
-                        description.style.opacity = 1;
-                    }
-                });
-
-                container.addEventListener("mouseout", function() {
-                    // Hide all descriptions when mouse leaves the container
-                    imageDescriptions.forEach(function(description) {
-                        description.style.opacity = 0;
-                    });
-                });
+    imageContainers.forEach(function(container) {
+        container.addEventListener("mouseover", function() {
+            // Hide all descriptions
+            imageDescriptions.forEach(function(description) {
+                description.style.opacity = 0;
             });
+
+            // Show the description for the current image
+            var description = container.querySelector(".img-desc");
+            if (description) {
+                description.style.opacity = 1;
+            }
+        });
+
+        container.addEventListener("mouseout", function() {
+            // Hide all descriptions when mouse leaves the container
+            imageDescriptions.forEach(function(description) {
+                description.style.opacity = 0;
+            });
+        });
+    });
 });
