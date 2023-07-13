@@ -13,6 +13,8 @@ div {
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: white;
     color: black;
 }
@@ -30,13 +32,22 @@ body {
 }
 
 .menu-bar {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    left: -50px;
-    bottom: 0px;
-    max-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    width:100%;
+    margin:0px;
+    height: 65px;
     background-color: #e31837;
+    transition: margin-top 0.3s ease;
+    position:relative;
+}
+
+.menu-bar.fixed {
+    position: fixed;
+    top:0;
+    left:0;
+    margin-top:0;
 }
  
 .img-container .img-desc {
@@ -62,26 +73,44 @@ body {
     opacity: 1;
   }
 
-#menu-bar-icon {
-    position: fixed;
-    background-color: #8c0000;
-    color: white;
+  .hamburger {
+    position: absolute;
     top: 0;
-    right: 0;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    text-decoration: none;
+    right: 23px;
+    display: inline-block;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+
+.hamburger-bar{
+    display:block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+#hamburger-box {
+    top: -50px;
+      right: 0;
+      width: 70px;
+      margin-top: 50px;
+      height: 65px;
+      background-color: #8c0000;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      position: absolute;
 }
 
 #menu-items {
-    position: fixed;
-    top: 50px;
+    position: absolute;
+    width:100%;
+    top: 65px;
     right: 0px;
     left: -50px;
     bottom: 0px;
-    max-height: 250px;
+    height: 230px;
     text-align: left;
     color: #e2bfbf;
     background-color: #8c0000;
@@ -90,29 +119,37 @@ body {
 
 #york-logo {
     display:block;
-    margin-top: 125px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-top: 21px;
+    width: 150px;
+    margin-left:100px;
 }
 
 #subtitle {
-    text-align: center;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 110px;
     font-family: 'IBMPlexSans-Medium';
-    font-style: italic;
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px #9a0100;
+    letter-spacing: .1em;
+    line-height: 1em;
 }
 
 #darkModeB {
-    position: fixed; 
-    right: 30px; 
-    top: 10px;
+    top: 20px;
+    right: 100px;
+    height: 30px;
     background-color: #8c0000;
     color: black;
     border: 2px solid transparent;
     border-radius: 20px;
     font-size: 18px;
     font-family: 'IBMPlexSans-Bold';
-    margin-right: 40px;
+    transition: margin-top ease;
+    position:absolute;
 }
+
 
 #darkModeB.hover { background-color: #ff000075 }
 
@@ -122,21 +159,23 @@ body {
 }
 
 #portalbody {
+    position: flex;
+    width: 85%;
     outline: 16px solid #e31837;
     text-align: center;
-    margin: 150px;
+    margin: 100px auto;
     font-family: 'IBMPlexSans-Bold';
 }
 
 #courseChkbox {
-    position: fixed;
-    top:77px;
+    position: absolute;
+    top:25px;
     left:50px;
 }
 
 #miscChkbox {
-    position: fixed;
-    top:77px;
+    position: absolute;
+    top:25px;
     left:383px;
 }
 

@@ -8,8 +8,16 @@
 
 <body onload="applyCheckboxStateHandlers()">
     <section id = "header">
-        <div class="menu-bar">
-            <a onclick="toggleTag('menu-items')" href="javascript:void(0);" id="menu-bar-icon">☰</a>
+        <a href="https://yorku.ca" target="_blank"><img id="york-logo" src="pictures/york-logo.png"></a><br>
+        <div class="menu-bar" id="menu-bar">
+            <p id="subtitle">Student Resources Portal</p>
+            <a onclick="toggleTag('menu-items')" href="javascript:void(0);" id="hamburger-box"></a>
+            <div onclick="toggleTag('menu-items')" href="javascript:void(0);" class="hamburger">
+                <div class="hamburger-bar"></div>
+                <div class="hamburger-bar"></div>
+                <div class="hamburger-bar"></div>
+            </div>
+            <button id="darkModeB" onclick="darkMode()">🌙</button>
             <div id="menu-items" style="display:none;">
                 <div class="courses">
                     <h1 style="margin-left: 25px;">Courses</h1>
@@ -35,10 +43,7 @@
                     <input onchange="toggleCheckboxes('Miscellaneous', this.checked)" type="checkbox" id="miscChkbox" checked>
                 </div>
             </div>
-        </div>
-        <a href="https://yorku.ca" target="_blank"><img id="york-logo" src="pictures/york-logo.png"></a><br>
-        <p id="subtitle">Student Resources Portal</p>
-        <button id="darkModeB" onclick="darkMode()">🌙</button>
+        </div>        
     </section>
 
     <section id = "portalbody" class="thumbnails">
