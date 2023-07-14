@@ -21,13 +21,15 @@
             <div id="menu-items" style="display:none;">
                 <div class="courses">
                     <h1 style="margin-left: 25px;">Courses</h1>
-                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox1" data-target="eClass" data-category="Courses" checked> eClass <br>
+    
+                    <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox1" data-target="eClass" data-category="Courses" checked> eClass <br>
                         <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox2" data-target="VSB" data-category="Courses" checked> Visual Schedule Builder <br>
                         <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox3" data-target="YorkCourses" data-category="Courses" checked> York Courses <br>
                         <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox4" data-target="REM" data-category="Courses" checked> Registration and Enrolment Module <br>
                         <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox5" data-target="DPR" data-category="Courses" checked> Degree Progress Report <br>
                         <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox6" data-target="GPA" data-category="Courses" checked> GPA Calculator
-                </div>
+                        <input onchange="toggleCheckboxes('Courses', this.checked)" type="checkbox" id="courseChkbox" checked>
+                    </div>
             
                 <div class="misc">
                     <h1 style="margin-left: 25px;">Miscellaneous</h1>
@@ -36,12 +38,8 @@
                             <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox9" type="checkbox" data-target="EXP" data-category="Miscellaneous" checked> Experience Portal <br>
                             <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox10" type="checkbox" data-target="Library" data-category="Miscellaneous" checked> York Libraries <br>
                             <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox11" type="checkbox" data-target="Atlas" data-category="Miscellaneous" checked> York Atlas <br>
-                </div>
-
-                <div class="select">
-                    <input onchange="toggleCheckboxes('Courses', this.checked)" type="checkbox" id="courseChkbox" checked>
-                    <input onchange="toggleCheckboxes('Miscellaneous', this.checked)" type="checkbox" id="miscChkbox" checked>
-                </div>
+                            <input onchange="toggleCheckboxes('Miscellaneous', this.checked)" type="checkbox" id="miscChkbox" checked>       
+                        </div>
             </div>
         </div>        
     </section>
