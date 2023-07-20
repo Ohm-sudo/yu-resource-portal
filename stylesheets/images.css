@@ -1,0 +1,31 @@
+/* Images */
+.thumbnails img{
+    width: 450px;
+    height: 350px;
+    margin-bottom: 50px;
+    margin-left: -30px;
+    outline: 2px solid black;
+}
+
+.img-container .img-desc {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .img-desc {
+    bottom: 64px;
+    left: 0px;
+    margin: -30px;
+    width: 103%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .img-container:hover .img-desc {
+    opacity: 1;
+  }

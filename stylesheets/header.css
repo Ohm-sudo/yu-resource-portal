@@ -1,0 +1,29 @@
+/* Header */
+#york-logo {
+    display:block;
+    margin-top: 21px;
+    width: 150px;
+    margin-left: 6.5rem;
+}
+
+#subtitle {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 6.5rem;
+    font-family: 'IBMPlexSans-Medium';
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px #9a0100;
+    letter-spacing: .1em;
+    line-height: 1em;
+    white-space: nowrap;
+}
+
+#portalbody {
+    width:80%;
+    min-width: 550px;
+    outline: 16px solid #e31837;
+    text-align: center;
+    margin: 80px auto;
+    font-family: 'IBMPlexSans-Bold';
+}

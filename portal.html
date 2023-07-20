@@ -2,11 +2,11 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="https://yulearn.yorku.ca/pluginfile.php/1/theme_moove/favicon/1681940410/favicon.ico">
     <title>York University Student Resource Portal</title>
-    <script src="portal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<link rel="stylesheet" type="text/css" href="portal.css">
 
-<body onloadstart="applyCheckboxStateHandlers()">
+<body>
     <section id = "header">
         <a href="https://yorku.ca" target="_blank"><img id="york-logo" src="pictures/york-logo.png"></a><br>
         <div class="menu-bar" id="menu-bar">
@@ -20,35 +20,34 @@
             <button id="darkModeB" onclick="darkMode()">🌙</button>
             <div id="menu-items" style="display:none;">
                 <div class="courses">
-                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox1" data-target="eClass" data-category="Courses" checked> eClass <br>
-                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox2" data-target="VSB" data-category="Courses" checked> Visual Schedule Builder <br>
-                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox3" data-target="YorkCourses" data-category="Courses" checked> York Courses <br>
-                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox4" data-target="REM" data-category="Courses" checked> Registration and Enrolment Module <br>
-                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox5" data-target="DPR" data-category="Courses" checked> Degree Progress Report <br>
-                        <input onchange="updChkbox('Courses', 'courseChkbox')" type="checkbox" id="checkbox6" data-target="GPA" data-category="Courses" checked> GPA Calculator <br>
+                        <input type="checkbox" class="column1" id="checkbox1" data-target="eClass"> eClass <br>
+                        <input type="checkbox" class="column1" id="checkbox2" data-target="VSB"> Visual Schedule Builder <br>
+                        <input type="checkbox" class="column1" id="checkbox3" data-target="YorkCourses"> York Courses <br>
+                        <input type="checkbox" class="column1" id="checkbox4" data-target="REM"> Registration and Enrolment Module <br>
+                        <input type="checkbox" class="column1" id="checkbox5" data-target="DPR"> Degree Progress Report <br>
+                        <input type="checkbox" class="column1" id="checkbox6" data-target="GPA"> GPA Calculator <br>
                 </div>
             
                 <div class="misc">
-                        <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox7" type="checkbox" data-target="SWS" data-category="Miscellaneous" checked> Student Web Services <br>
-                        <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox8" type="checkbox" data-target="SFP" data-category="Miscellaneous" checked> Student Financial Profile <br>
-                        <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox9" type="checkbox" data-target="EXP" data-category="Miscellaneous" checked> Experience Portal <br>
-                        <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox10" type="checkbox" data-target="Library" data-category="Miscellaneous" checked> York Libraries <br>
-                        <input onchange="updChkbox('Miscellaneous', 'miscChkbox')" id="checkbox11" type="checkbox" data-target="Atlas" data-category="Miscellaneous" checked> York Atlas <br>
-                
+                        <input type="checkbox" class="column2" id="checkbox7" data-target="SWS"> Student Web Services <br>
+                        <input type="checkbox" class="column2" id="checkbox8" data-target="SFP"> Student Financial Profile <br>
+                        <input type="checkbox" class="column2" id="checkbox9" data-target="EXP"> Experience Portal <br>
+                        <input type="checkbox" class="column2" id="checkbox10" data-target="Library"> York Libraries <br>
+                        <input type="checkbox" class="column2" id="checkbox11" data-target="Atlas"> York Atlas <br>
                 </div>
 
                 <div class="chkBox-container" id="course-container">
                     <label class="switch">
-                        <input onchange="toggleCheckboxes('Courses', this.checked)" type="checkbox" id="courseChkbox" checked>
+                        <input type="checkbox" id="selAll1">
                         <span class="slider round"></span>
-                        <label style="position:absolute; left:50px; bottom:-4px;" for="courseChkbox">Courses</label>
+                        <label style="position:absolute; left:50px; bottom:-4px;" for="selAll1">Courses</label>
                     </label>
                 </div>
                 <div class="chkBox-container" id="misc-container">
                     <label class="switch">
-                        <input onchange="toggleCheckboxes('Miscellaneous', this.checked)" type="checkbox" id="miscChkbox" checked>
+                        <input type="checkbox" id="selAll2">
                         <span class="slider round"></span>
-                        <label style="position:absolute; left:50px; bottom:-4px;" for="miscChkbox">Miscellaneous</label>
+                        <label style="position:absolute; left:50px; bottom:-4px;" for="selAll2">Miscellaneous</label>
                     </label>
                 </div>
             </div>
@@ -170,4 +169,8 @@
     </section>
 
     <button id="backToTop" onclick="scrollToTop()">⮝</button>
+    <script src="scripts/togChksTags.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/scrollToTop.js"></script>
+    <script src="scripts/imageDesc.js"></script>
 </body>
