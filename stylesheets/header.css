@@ -1,15 +1,16 @@
 /* Header */
 #york-logo {
     display:block;
-    margin-top: 21px;
+    position: relative;
+    top: 21px;
+    margin-left: 2.25rem;
     width: 150px;
-    margin-left: 6.5rem;
 }
 
 #subtitle {
     text-align: left;
-    margin-top: 20px;
-    margin-left: 6.5rem;
+    position: relative;
+    margin-left: 5.5rem;
     font-family: 'IBMPlexSans-Medium';
     font-size: 24px;
     color: white;

@@ -13,6 +13,27 @@ function toggleTag(name) {
     }
 }
 
+// Checks checkboxes and determines if the element should be added/removed
+function blankCheck() {
+    const checkedCount = $('input[type="checkbox"]:checked').length;
+    // const mySection = $('#portalbody');
+    const blankMsg = $('#defMsg');
+
+    if(checkedCount === 0)
+    {
+        // Add new element
+        blankMsg.show();
+    } else {
+        // Remove element
+        blankMsg.hide();
+    }
+}
+
+$('input[type="checkbox"]').on('change', blankCheck);
+$(document).ready(function() {
+    blankCheck();
+});
+
 // Toggles resources that appear as part of the webpage's contents
 function toggleElementDisplay(checkboxId) {
     const checkbox = document.getElementById(checkboxId);

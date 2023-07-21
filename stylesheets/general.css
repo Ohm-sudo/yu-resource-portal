@@ -20,6 +20,12 @@ body {
     color: black;
 }
 
+#defMsg {
+  display: none;
+  padding: 80px;
+  font-size: 36px;
+}
+
 /* Fonts */
 @font-face {
     font-family: 'IBMPlexSans-Bold';

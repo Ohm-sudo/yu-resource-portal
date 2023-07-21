@@ -8,7 +8,11 @@
 
 <body>
     <section id = "header">
-        <a href="https://yorku.ca" target="_blank"><img id="york-logo" src="pictures/york-logo.png"></a><br>
+        <div>
+        <a id="york-link" href="https://yorku.ca" target="_blank">
+            <img id="york-logo" src="pictures/york-logo.png">
+        </a><br>
+        </div>
         <div class="menu-bar" id="menu-bar">
             <p id="subtitle">Student Resources Portal</p>
             <a onclick="toggleTag('menu-items')" href="javascript:void(0);" id="hamburger-box"></a>
@@ -51,8 +55,6 @@
                     </label>
                 </div>
             </div>
-            
-        
         </div>        
     </section>
 
@@ -166,11 +168,11 @@
                </div>
             </a>
         </div>
+        <p id="defMsg">Click on ☰, then select resources to show here</p>
     </section>
-
+</body>
     <button id="backToTop" onclick="scrollToTop()">⮝</button>
     <script src="scripts/togChksTags.js"></script>
     <script src="scripts/darkMode.js"></script>
     <script src="scripts/scrollToTop.js"></script>
     <script src="scripts/imageDesc.js"></script>
-</body>
