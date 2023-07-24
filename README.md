@@ -1,4 +1,4 @@
-# York University Student Resource Portal (WIP)
+# York University Student Resource Portal
 A webpage that makes students' lives easier by compiling relevant and frequently accessed resources all on one page. Endless searching, creating bookmarks, and clicking shall come to an end. 
 
 ## Features
