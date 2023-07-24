@@ -26,6 +26,24 @@ body {
   font-size: 36px;
 }
 
+#portalbody {
+  width:80%;
+  min-width: 550px;
+  outline: 16px solid #e31837;
+  text-align: center;
+  margin: 200px auto;
+  font-family: 'IBMPlexSans-Bold';
+}
+
+#disclaimer {
+  position: relative;
+  bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'IBMPlexSans-Medium';
+}
+
 /* Fonts */
 @font-face {
     font-family: 'IBMPlexSans-Bold';

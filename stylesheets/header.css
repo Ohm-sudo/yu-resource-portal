@@ -11,6 +11,7 @@
     text-align: left;
     position: relative;
     margin-left: 5.5rem;
+    bottom: 5px;
     font-family: 'IBMPlexSans-Medium';
     font-size: 24px;
     color: white;
@@ -18,13 +19,4 @@
     letter-spacing: .1em;
     line-height: 1em;
     white-space: nowrap;
-}
-
-#portalbody {
-    width:80%;
-    min-width: 550px;
-    outline: 16px solid #e31837;
-    text-align: center;
-    margin: 80px auto;
-    font-family: 'IBMPlexSans-Bold';
 }

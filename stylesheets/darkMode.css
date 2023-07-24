@@ -5,8 +5,8 @@
 }
 
 #darkModeB {
-    top: 20px;
-    right: 100px;
+    top: 1.25rem;
+    right: 5%;
     height: 30px;
     background-color: #8c0000;
     color: black;
@@ -15,7 +15,7 @@
     font-size: 18px;
     font-family: 'IBMPlexSans-Bold';
     transition: margin-top ease;
-    position:absolute;
+    position: absolute;
 }
 
 #darkModeB.hover { background-color: #ff000075 }
@@ -23,4 +23,10 @@
 #darkModeB:active {
     background-color: #ff000075;
     transform: translateY(4px);
+}
+
+@media (max-width: 500px) {
+    #darkModeB {
+        display: none;
+    }
 }

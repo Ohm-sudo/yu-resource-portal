@@ -2,12 +2,17 @@
 .menu-bar {
     width: 99.99%;
     margin: 0px;
-    top: 25px;
+    top: 4.55rem;
     left: 0px;
     height: 64px;
     background-color: #e31837;
     transition: margin-top 0.3s ease;
-    position: relative;
+    position: fixed;
+    z-index: 1;
+}
+
+.menu-bar:hover {
+    background-color: #cc2030;
 }
 
 .menu-bar.fixed {
@@ -18,7 +23,7 @@
 .hamburger {
   position: absolute;
   top: 0;
-  right: 19px;
+  left: 19px;
   display: inline-block;
   margin: 16px 0;
   cursor: pointer;
@@ -38,6 +43,13 @@
     white-space: nowrap;
 }
 
+.misc {
+    position: absolute;
+    margin-left: 0;
+    top: 240;
+    left: 80;
+}
+
 .chkBox-container {
     position:absolute;
     top: 20px;
@@ -47,12 +59,12 @@
 }
 
 #misc-container {
-    left: 365.5px;
+    top: 265.5px;
 }
 
 #hamburger-box {
     top: 0px;
-      right: 0px;
+      left: 0px;
       width: 65px;
       height: 64px;
       background-color: #8c0000;
@@ -64,11 +76,11 @@
 
 #menu-items {
     position: relative;
-    width: 100%;
+    width: 25rem;
     margin: 0px;
     top: -8px;
-    height: 230px;
-    text-align: left;
+    height: 700%;
+    /* text-align: left; */
     color: #e2bfbf;
     background-color: #8c0000;
     font-family: 'IBMPlexSans-Medium';
