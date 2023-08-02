@@ -9,10 +9,6 @@ function darkMode() {
 
     // Update toggle button based on current mode
     darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙';
-    
-    var img = document.getElementById("york-logo");
-    var imageSrc = isDarkMode ? "pictures/york-logo-dm.png" : "pictures/york-logo.png";
-    img.src = imageSrc;
 }
 
 $(document).ready(function() {
@@ -24,14 +20,10 @@ $(document).ready(function() {
 
   if (isDarkMode === 'true') {
     $('body').addClass('dark-mode');
+
     darkModeToggle.text('☀️');
   } else {
     $('body').removeClass('dark-mode');
     darkModeToggle.text('🌙');
   }
-
-  // Change image based on dark mode preference
-  var img = $('#york-logo');
-  var imageSrc = isDarkMode === 'true' ? "pictures/york-logo-dm.png" : "pictures/york-logo.png";
-  img.attr('src', imageSrc);
 });

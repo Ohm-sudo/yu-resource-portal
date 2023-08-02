@@ -1,34 +1,33 @@
 // Scroll to top button appears when scrolling down on webpage
 function showBackToTopButton() {
-    var button = document.getElementById("backToTop");
-    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        button.style.display = "block";
+    const button = $("#backToTop");
+    if ($(document.body).scrollTop() > 20 || $(document.documentElement).scrollTop() > 20) {
+      button.css("display", "block");
     } else {
-        button.style.display = "none";
+      button.css("display", "none");
     }
-}
+  }
 
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
-window.addEventListener('scroll', function() {
-    var menu = document.getElementById('menu-bar');
-    var darkModeIcon = document.getElementById('darkModeB');
-    var menuItems = document.getElementById('menu-items');
-    var scrollPosition = window.scrollY;
+$(window).on('scroll', function() {
+    const menu = $('#menu-bar');
+    const darkModeIcon = $('#darkModeB');
+    const menuItems = $('#menu-items');
+    const scrollPosition = $(window).scrollTop();
 
-    if(scrollPosition > 0) {
-        menu.classList.add('fixed');
-        darkModeIcon.classList.add('fixed');
-        menuItems.classList.add('fixed');
-
+    if (scrollPosition > 0) {
+      menu.addClass('fixed');
+      darkModeIcon.addClass('fixed');
+      menuItems.addClass('fixed');
     } else {
-        menu.classList.remove('fixed');
-        darkModeIcon.classList.remove('fixed');
-        menuItems.classList.remove('fixed');
+      menu.removeClass('fixed');
+      darkModeIcon.removeClass('fixed');
+      menuItems.removeClass('fixed');
     }
 });
 
-window.onscroll = function() { showBackToTopButton() };
+$(window).on("scroll", showBackToTopButton);

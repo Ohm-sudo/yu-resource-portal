@@ -16,7 +16,6 @@ function toggleTag(name) {
 // Checks checkboxes and determines if the element should be added/removed
 function blankCheck() {
     const checkedCount = $('input[type="checkbox"]:checked').length;
-    // const mySection = $('#portalbody');
     const blankMsg = $('#defMsg');
 
     if(checkedCount === 0)
@@ -36,18 +35,18 @@ $(document).ready(function() {
 
 // Toggles resources that appear as part of the webpage's contents
 function toggleElementDisplay(checkboxId) {
-    const checkbox = document.getElementById(checkboxId);
-    if(!checkbox) return;
+    const checkbox = $('#' + checkboxId);
+    if (!checkbox.length) return;
 
-    const targetId = checkbox.getAttribute('data-target');
-    if(!targetId) return;
+    const targetId = checkbox.data('target');
+    if (!targetId) return;
 
-    const element = document.getElementById(targetId);
+    const element = $('#' + targetId);
 
-    if (checkbox.checked) {
-        element.style.display = 'inline-block';
+    if (checkbox.prop('checked')) {
+      element.css('display', 'inline-block');
     } else {
-        element.style.display = 'none';
+      element.css('display', 'none');
     }
 }
 
@@ -76,7 +75,7 @@ function loadCheckboxStates() {
     }
 }
 
-// Updates selAll1 and selAll2 based on checkboxes checked/unchecked in their column
+// Updates selAll based on checkboxes checked/unchecked in their column
 function updateSelectAllCheckbox(columnClassName, selectAllCheckboxId) {
     const checkboxesInColumn = $(`.${columnClassName}`).not(`#${selectAllCheckboxId}`);
     const allChecked = checkboxesInColumn.toArray().every(checkbox => checkbox.checked);
@@ -89,26 +88,43 @@ function updateSelectAllCheckbox(columnClassName, selectAllCheckboxId) {
       toggleElementDisplay(this.id, targetId);
     }
   
-    // Update "select/unselect all" checkbox for column1 and column2
-    for(i = 1; i <= 2; i++)
+    // Update "select/unselect all" checkboxes
+    for(i = 1; i <= 5; i++)
         if (this.classList.contains('column' + i))
             updateSelectAllCheckbox('column' + i, 'selAll' + i);
   
     saveCheckboxStates();
   });
 
-// Updates selAll1 in real time
+// Updates selAll chexboxes in real time
 $('#selAll1').on('change', function() {
     $('.column1').prop('checked', this.checked);
     saveCheckboxStates();
     $('.column1').trigger('change');
 });
 
-// Updates selAll1 in real time
 $('#selAll2').on('change', function() {
     $('.column2').prop('checked', this.checked);
     saveCheckboxStates();
     $('.column2').trigger('change');
+});
+
+$('#selAll3').on('change', function() {
+    $('.column3').prop('checked', this.checked);
+    saveCheckboxStates();
+    $('.column3').trigger('change');
+});
+
+$('#selAll4').on('change', function() {
+    $('.column4').prop('checked', this.checked);
+    saveCheckboxStates();
+    $('.column4').trigger('change');
+});
+
+$('#selAll5').on('change', function() {
+    $('.column5').prop('checked', this.checked);
+    saveCheckboxStates();
+    $('.column5').trigger('change');
 });
 
 loadCheckboxStates();

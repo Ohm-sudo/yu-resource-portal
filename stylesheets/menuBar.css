@@ -1,5 +1,5 @@
 /* Menu Bar */
-.menu-bar {
+#menu-bar {
     width: 99.99%;
     margin: 0px;
     top: 4.55rem;
@@ -11,13 +11,48 @@
     z-index: 1;
 }
 
-.menu-bar:hover {
+#menu-items {
+    display: none;
+    position: fixed;
+    padding: 20px;
+    width: 23rem;
+    margin: 0px;
+    top: 8.55rem;
+    color: #f9e9e9;
+    background-color: #8c0000;
+    font-family: 'IBMPlexSans-Medium';
+    transition: margin-top 0.3s ease;
+    z-index: 1;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+@media (min-height: 650px)
+{
+    #menu-items {
+        height: 24rem;
+    }
+}
+
+@media (max-height: 649px)
+{
+    #menu-items {
+        height: 12rem;
+    }
+}
+
+#menu-bar:hover {
     background-color: #cc2030;
 }
 
-.menu-bar.fixed {
+#menu-bar.fixed {
     position: fixed;
     top:0;
+}
+
+#menu-items.fixed {
+    position: fixed;
+    top: 4em;
 }
 
 .hamburger {
@@ -37,29 +72,32 @@
     margin: 6px 0;
 }
 
-.courses, .misc {
-    margin-top: 70px;
-    margin-left: 80px;
-    white-space: nowrap;
-}
-
-.misc {
-    position: absolute;
-    margin-left: 0;
-    top: 240;
-    left: 80;
-}
-
-.chkBox-container {
-    position:absolute;
-    top: 20px;
-    left: 0px;
+.chkBox-slider {
+    position: relative;
+    right: 4rem;
+    top: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    height: 24px;
     font-size: 24px;
     font-weight: bold;
 }
 
-#misc-container {
-    top: 265.5px;
+.chkBoxes {
+    position: relative;
+    left: -2rem;
+    top: -1rem;
+}
+
+.resourceLabel {   
+    position: relative; 
+    left: 40px; 
+    bottom: 2px;
+}
+
+.category {
+    margin-left:0; 
+    margin-bottom: 3rem;
 }
 
 #hamburger-box {
@@ -74,14 +112,3 @@
       position: absolute;
 }
 
-#menu-items {
-    position: relative;
-    width: 25rem;
-    margin: 0px;
-    top: -8px;
-    height: 700%;
-    /* text-align: left; */
-    color: #e2bfbf;
-    background-color: #8c0000;
-    font-family: 'IBMPlexSans-Medium';
-}

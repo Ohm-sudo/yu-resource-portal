@@ -1,19 +1,21 @@
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
     <link rel="icon" type="image/png" href="https://yulearn.yorku.ca/pluginfile.php/1/theme_moove/favicon/1681940410/favicon.ico">
     <title>York University Student Resource Portal</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/ed1e66399b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <section id = "header">
-        <div>
-        <a id="york-link" href="https://yorku.ca" target="_blank">
-            <img id="york-logo" src="pictures/york-logo.png">
-        </a><br>
+        <div id="logo">
+            <a href="https://github.com/Ohm-sudo/yu-resource-portal" target="_blank">
+                yu-stu-rpl
+            </a>
         </div>
-        <div class="menu-bar" id="menu-bar">
+        <div id="menu-bar">
             <p id="subtitle">Student Resources Portal</p>
             <a onclick="toggleTag('menu-items')" href="javascript:void(0);" id="hamburger-box"></a>
             <div onclick="toggleTag('menu-items')" href="javascript:void(0);" class="hamburger">
@@ -22,46 +24,83 @@
                 <div class="hamburger-bar"></div>
             </div>
             <button id="darkModeB" onclick="darkMode()">🌙</button>
-            <div id="menu-items" style="display:none;">
-                <div class="courses">
+        </div>
+            <div id="menu-items">
+                <div class="chkBoxes">
+                    <div class="category">
+                        <div class="chkBox-slider" id="course-slider">
+                            <label class="switch">
+                                <input type="checkbox" id="selAll1">
+                                <span class="slider round"></span>
+                                <label class="resourceLabel" for="selAll1">Courses</label>
+                            </label>
+                        </div> <br>
                         <input type="checkbox" class="column1" id="checkbox1" data-target="eClass"> eClass <br>
                         <input type="checkbox" class="column1" id="checkbox2" data-target="VSB"> Visual Schedule Builder <br>
                         <input type="checkbox" class="column1" id="checkbox3" data-target="YorkCourses"> York Courses <br>
                         <input type="checkbox" class="column1" id="checkbox4" data-target="REM"> Registration and Enrolment Module <br>
                         <input type="checkbox" class="column1" id="checkbox5" data-target="DPR"> Degree Progress Report <br>
                         <input type="checkbox" class="column1" id="checkbox6" data-target="GPA"> GPA Calculator <br>
-                </div>
-            
-                <div class="misc">
-                        <input type="checkbox" class="column2" id="checkbox7" data-target="SWS"> Student Web Services <br>
-                        <input type="checkbox" class="column2" id="checkbox8" data-target="SFP"> Student Financial Profile <br>
-                        <input type="checkbox" class="column2" id="checkbox9" data-target="EXP"> Experience Portal <br>
-                        <input type="checkbox" class="column2" id="checkbox10" data-target="Library"> York Libraries <br>
-                        <input type="checkbox" class="column2" id="checkbox11" data-target="Atlas"> York Atlas <br>
-                </div>
+                    </div> <br>
 
-                <div class="chkBox-container" id="course-container">
-                    <label class="switch">
-                        <input type="checkbox" id="selAll1">
-                        <span class="slider round"></span>
-                        <label style="position:absolute; left:50px; bottom:-4px;" for="selAll1">Courses</label>
-                    </label>
-                </div>
-                <div class="chkBox-container" id="misc-container">
-                    <label class="switch">
-                        <input type="checkbox" id="selAll2">
-                        <span class="slider round"></span>
-                        <label style="position:absolute; left:50px; bottom:-4px;" for="selAll2">Miscellaneous</label>
-                    </label>
+                    <div class="category">
+                        <div class="chkBox-slider" id="acad-slider">
+                            <label class="switch">
+                                <input type="checkbox" id="selAll2">
+                                <span class="slider round"></span>
+                                <label class="resourceLabel" for="selAll2">Academics</label>
+                            </label>
+                        </div> <br>
+                        <input type="checkbox" class="column2" id="checkbox7" data-target="AcadAdvising"> Academic Advising <br>
+                        <input type="checkbox" class="column2" id="checkbox8" data-target="WritCentre"> Writing Centre <br>
+                        <input type="checkbox" class="column2" id="checkbox9" data-target="Library"> York Libraries <br>
+                    </div> <br>
+
+                    <div class="category">
+                        <div class="chkBox-slider" id="career-slider">
+                            <label class="switch">
+                                <input type="checkbox" id="selAll3">
+                                <span class="slider round"></span>
+                                <label class="resourceLabel" for="selAll3">Careers</label>
+                            </label>
+                        </div> <br>
+                        <input type="checkbox" class="column3" id="checkbox10" data-target="CareerCentre"> Career Centre <br>
+                        <input type="checkbox" class="column3" id="checkbox11" data-target="YUJobs"> York Jobs <br>
+                        <input type="checkbox" class="column3" id="checkbox12" data-target="EXP"> Experience Portal <br>
+                    </div> <br>
+
+                    <div class="category">
+                        <div class="chkBox-slider" id="personal-slider">
+                            <label class="switch">
+                                <input type="checkbox" id="selAll4">
+                                <span class="slider round"></span>
+                                <label class="resourceLabel" for="selAll4">Personal</label>
+                            </label>
+                        </div> <br>
+                        <input type="checkbox" class="column4" id="checkbox13" data-target="SWS"> Student Web Services <br>
+                        <input type="checkbox" class="column4" id="checkbox14" data-target="SOS"> Student Account Online Statement <br>
+                        <input type="checkbox" class="column4" id="checkbox15" data-target="SFP"> Student Financial Profile<br>
+                    </div> <br>
+
+                    <div class="category">
+                        <div class="chkBox-slider" id="misc-slider">
+                            <label class="switch">
+                                <input type="checkbox" id="selAll5">
+                                <span class="slider round"></span>
+                                <label class="resourceLabel" for="selAll5">Misc.</label>
+                            </label>
+                        </div> <br>
+                        <input type="checkbox" class="column5" id="checkbox16" data-target="Atlas"> York Atlas <br>
+                        <input type="checkbox" class="column5" id="checkbox17" data-target="YUMap"> York Interactive Map <br>
+                    </div>
                 </div>
             </div>
-        </div>        
     </section>
 
     <section id = "portalbody" class="thumbnails">
         <div class= "img-container" id="eClass">
-                <h2>eClass</h2>
-                <a href="https://eclass.yorku.ca/my/" target="_blank">
+            <h2>eClass</h2>
+            <a href="https://eclass.yorku.ca/my/" target="_blank">
                 <img src="pictures/eclass.png" alt="eclass">
                 <div class="img-desc">
                     Courses, quizzes, exams, assignments, and more...
@@ -71,48 +110,18 @@
 
         <div class= "img-container" id="VSB">
             <h2>Visual Schedule Builder</h2>
-                <a href="https://registrar.yorku.ca/enrol/guide/vsb" target="_blank">
+            <a href="https://registrar.yorku.ca/enrol/guide/vsb" target="_blank">
                 <img src="pictures/vsb.png" alt="vsb">
                 <div class="img-desc">
                     Helps prepare a schedule ahead of your enrolment date
                 </div>
             </a>
         </div>
-        
-        <div class= "img-container" id="SWS">
-            <h2>Student Web Services</h2>
-                <a href="https://apps7.sis.yorku.ca/Apps/WebObjects/SAM.woa/wa/DirectAction/sam" target="_blank">
-                <img src="pictures/webservice.png" alt="webservice">
-                <div class="img-desc">
-                    Personal info, banking info, enrolment times...
-                </div>
-            </a>
-        </div>
-
-        <div class= "img-container" id="EXP">
-            <h2>Experience Portal</h2>
-                <a href="https://experience.yorku.ca/myAccount/dashboard.htm" target="_blank">
-                <img src="pictures/experience.png" alt="experience">
-                <div class="img-desc">
-                    Job Postings, Career Centre, Internships, Research...
-                </div>
-            </a>
-        </div>
-
-        <div class= "img-container" id="DPR">
-            <h2>Degree Progress Report</h2>
-                <a href="https://myacademicrecord.students.yorku.ca/degree-progress-report" target="_blank">
-                <img src="pictures/dpr.png" alt="dpr" >
-                <div class="img-desc">
-                    Checks requirements to graduate in your degree program
-                </div>
-            </a>
-        </div>
 
         <div class= "img-container" id="YorkCourses">
             <h2>Courses</h2>
-                <a href="https://w2prod.sis.yorku.ca/Apps/WebObjects/cdm" target="_blank">
-                <img src="pictures/courses.PNG" alt="courses">
+            <a href="https://w2prod.sis.yorku.ca/Apps/WebObjects/cdm" target="_blank">
+                <img src="pictures/courses.png" alt="courses">
                 <div class="img-desc">
                      Search courses available for Fall/Winter, or Summer
                 </div>
@@ -121,7 +130,7 @@
 
         <div class= "img-container" id="REM">
             <h2>Registration and Enrolment Module</h2>
-                <a href="https://wrem.sis.yorku.ca/Apps/WebObjects/REM.woa/wa/DirectAction/rem" target="_blank">
+            <a href="https://wrem.sis.yorku.ca/Apps/WebObjects/REM.woa/wa/DirectAction/rem" target="_blank">
                 <img src="pictures/rem.png" alt="rem">
                 <div class="img-desc">
                     Enrol in your courses for the upcoming semester
@@ -129,9 +138,19 @@
             </a>
         </div>
 
+        <div class= "img-container" id="DPR">
+            <h2>Degree Progress Report</h2>
+            <a href="https://myacademicrecord.students.yorku.ca/degree-progress-report" target="_blank">
+                <img src="pictures/dpr.png" alt="dpr" >
+                <div class="img-desc">
+                    Checks requirements to graduate in your degree program
+                </div>
+            </a>
+        </div>
+
         <div class= "img-container" id="GPA">
             <h2>GPA Calculator</h2>
-                <a href="https://apps12.sis.yorku.ca/apps/gpa-calculator/" target="_blank">
+            <a href="https://apps12.sis.yorku.ca/apps/gpa-calculator/" target="_blank">
                 <img src="pictures/gpa.png" alt="gpa">
                 <div class="img-desc">
                     Calculates your GPA
@@ -139,41 +158,122 @@
             </a>
         </div>
 
-        <div class= "img-container" id="SFP">
-            <h2>Student Financial Profile</a></h2>
-                <a href="https://apps4.sis.yorku.ca/Apps/WebObjects/OSS" target="_blank">
-                <img src="pictures/sfp.png" alt="sfp">
+         <div class= "img-container" id="AcadAdvising">
+            <h2>Academic Advising</h2>
+            <a href="https://advising.students.yorku.ca/locations" target="_blank">
+                <img src="pictures/acadadvising.png" alt="acadadvising">
                 <div class="img-desc">
-                    View tuition fees, monthly statements, transactions...
-               </div>
+                    Guidance about degrees, petitions, requirements
+                </div>
+            </a>
+        </div>
+
+        <div class= "img-container" id="WritCentre">
+            <h2>Writing Centre</h2>
+            <a href="https://www.yorku.ca/laps/writing-centre/" target="_blank">
+                <img src="pictures/writcentre.png" alt="writcentre">
+                <div class="img-desc">
+                    Enhance your writing skills, book appointments
+                </div>
             </a>
         </div>
 
         <div class= "img-container" id="Library">
-            <h2>Libraries</a></h2>
-                <a href="https://www.library.yorku.ca/web/" target="_blank">
+            <h2>Libraries</h2>
+            <a href="https://www.library.yorku.ca/web/" target="_blank">
                 <img src="pictures/yulibraries.png" alt="yulibraries">
                 <div class="img-desc">
                     Search books, workshops, locations, and study spaces
                </div>
             </a>
         </div>
+               
+        <div class= "img-container" id="CareerCentre">
+            <h2>Career Centre</h2>
+            <a href="https://careers.yorku.ca/" target="_blank">
+                <img src="pictures/careercentre.png" alt="careercentre">
+                <div class="img-desc">
+                    Career development, networking, appointments
+                </div>
+            </a>
+        </div>
+
+        <div class= "img-container" id="YUJobs">
+            <h2>York Jobs</h2>
+            <a href="https://www.yorku.ca/jobs" target="_blank">
+                <img src="pictures/yujobs.png" alt="yujobs">
+                <div class="img-desc">
+                    Work/Study, RAY, LEAP jobs at YorkU
+                </div>
+            </a>
+        </div>
+
+        <div class= "img-container" id="EXP">
+            <h2>Experience Portal</h2>
+            <a href="https://experience.yorku.ca/myAccount/dashboard.htm" target="_blank">
+                <img src="pictures/experience.png" alt="experience">
+                <div class="img-desc">
+                    Job Postings, Career Centre, Internships, Research...
+                </div>
+            </a>
+        </div>
+
+        <div class= "img-container" id="SWS">
+            <h2>Student Web Services</h2>
+            <a href="https://apps7.sis.yorku.ca/Apps/WebObjects/SAM.woa/wa/DirectAction/sam" target="_blank">
+                <img src="pictures/webservice.png" alt="webservice">
+                <div class="img-desc">
+                    Personal info, banking info, enrolment times...
+                </div>
+            </a>
+        </div>
+
+        <div class= "img-container" id="SOS">
+            <h2>Student Account Statement</h2>
+            <a href="https://apps4.sis.yorku.ca/Apps/WebObjects/OSS" target="_blank">
+                <img src="pictures/accountstatement.png" alt="accountstatement">
+                <div class="img-desc">
+                    View tuition fees, monthly statements, transactions...
+                </div>
+            </a>
+        </div>
+        
+        <div class= "img-container" id="SFP">
+            <h2>Student Financial Profile</h2>
+            <a href="https://sfs.yorku.ca/aid/sfp/" target="_blank">
+                <img src="pictures/sfp.png" alt="sfp">
+                <div class="img-desc">
+                    Application for scholarships, employment programs, awards
+               </div>
+            </a>
+        </div>
 
         <div class= "img-container" id="Atlas">
-            <h2>Atlas</a></h2>
-                <a href="https://atlas.cafe.uit.yorku.ca/atlas/servlet/atlas/" target="_blank">
+            <h2>Atlas</h2>
+            <a href="https://atlas.cafe.uit.yorku.ca/atlas/servlet/atlas/" target="_blank">
                 <img src="pictures/yuatlas.png" alt="yuatlas">
                 <div class="img-desc">
                     Phone and e-mail directory
                </div>
             </a>
         </div>
+
+        <div class="img-container" id="YUMap">
+            <h2>York Interactive Map</h2>
+            <a href="https://map.concept3d.com/?id=1200#!ce/34557?s/?ct/29101,29093" target="_blank">
+                <img src="pictures/yumap.png" alt="yumap">
+                <div class="img-desc">
+                    Find buildings, restaurants, transit and driving directions
+                </div>
+            </a>
+        </div>
+
         <p id="defMsg">Click on ☰, then select which resources you want to show here</p>
     </section>
-
+    
     <label id="disclaimer">Not affiliated with York University</label>
 </body>
-    <button id="backToTop" onclick="scrollToTop()">⮝</button>
+    <button id="backToTop" onclick="scrollToTop()"><i class='fas fa-chevron-up'></i></button>
     <script src="scripts/togChksTags.js"></script>
     <script src="scripts/darkMode.js"></script>
     <script src="scripts/scrollToTop.js"></script>

@@ -20,6 +20,15 @@ body {
     color: black;
 }
 
+#logo {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  font-size: 36px;
+  font-family: 'IBMPlexSans-Bold';
+  color: #e31837;
+}
+
 #defMsg {
   display: none;
   padding: 80px;
@@ -44,6 +53,20 @@ body {
   font-family: 'IBMPlexSans-Medium';
 }
 
+#subtitle {
+  text-align: left;
+  position: relative;
+  margin-left: 5.5rem;
+  bottom: 5px;
+  font-family: 'IBMPlexSans-Medium';
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px #9a0100;
+  letter-spacing: .1em;
+  line-height: 1em;
+  white-space: nowrap;
+}
+
 /* Fonts */
 @font-face {
     font-family: 'IBMPlexSans-Bold';
@@ -54,4 +77,3 @@ body {
     font-family: 'IBMPlexSans-Medium';
     src: url('../fonts/IBMPlexSans-Medium.ttf') format('truetype');
 }
-  
