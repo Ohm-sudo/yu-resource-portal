@@ -1,0 +1,114 @@
+/* Menu Bar */
+#menu-bar {
+    width: 99.99%;
+    margin: 0px;
+    top: 4.55rem;
+    left: 0px;
+    height: 64px;
+    background-color: #e31837;
+    transition: margin-top 0.3s ease;
+    position: fixed;
+    z-index: 1;
+}
+
+#menu-items {
+    display: none;
+    position: fixed;
+    padding: 20px;
+    width: 23rem;
+    margin: 0px;
+    top: 8.55rem;
+    color: #f9e9e9;
+    background-color: #8c0000;
+    font-family: 'IBMPlexSans-Medium';
+    transition: margin-top 0.3s ease;
+    z-index: 1;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+@media (min-height: 650px)
+{
+    #menu-items {
+        height: 24rem;
+    }
+}
+
+@media (max-height: 649px)
+{
+    #menu-items {
+        height: 12rem;
+    }
+}
+
+#menu-bar:hover {
+    background-color: #cc2030;
+}
+
+#menu-bar.fixed {
+    position: fixed;
+    top:0;
+}
+
+#menu-items.fixed {
+    position: fixed;
+    top: 4em;
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 19px;
+  display: inline-block;
+  margin: 16px 0;
+  cursor: pointer;
+}
+
+.hamburger-bar {
+    display:block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.chkBox-slider {
+    position: relative;
+    right: 4rem;
+    top: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    height: 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.chkBoxes {
+    position: relative;
+    left: -2rem;
+    top: -1rem;
+}
+
+.resourceLabel {   
+    position: relative; 
+    left: 40px; 
+    bottom: 2px;
+}
+
+.category {
+    margin-left:0; 
+    margin-bottom: 3rem;
+}
+
+#hamburger-box {
+    top: 0px;
+      left: 0px;
+      width: 65px;
+      height: 64px;
+      background-color: #8c0000;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      position: absolute;
+}
+
