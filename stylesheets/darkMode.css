@@ -1,8 +1,23 @@
 /* Dark Mode */
 .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: #2b2d31;
+    color: white !important;
 }
+
+.menu-bar-1-dm {
+    background-color: #18191a !important ;
+    text-shadow: none !important ;
+}
+
+.portal-body-dm {
+    outline: 16px solid #18191a !important;
+}
+
+.menu-bar-2-dm {
+    background-color: #0d0d0d !important;
+    color: white !important;
+}
+
 
 #darkModeB {
     top: 1.25rem;
